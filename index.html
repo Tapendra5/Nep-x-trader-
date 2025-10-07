@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nep-X Trade Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div class="container" id="login-page">
+    <h1>🔐 Nep-X Trade Login</h1>
+    <input type="text" id="username" placeholder="Enter your username">
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboard">
+    <h2>Welcome, <span id="user"></span> 👋</h2>
+    <p>Wallet Balance: <b>Rs.<span id="balance">0</span></b></p>
+
+    <div class="actions">
+      <button onclick="showRecharge()">Recharge 💵</button>
+      <button onclick="showWithdraw()">Withdraw 💸</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Recharge Page -->
+  <div class="page" id="recharge-page">
+    <h2>💰 Recharge Wallet</h2>
+    <p>Send to eSewa ID: <b>9766692182</b></p>
+    <input type="number" id="recharge-amount" placeholder="Enter amount (e.g. 500)">
+    <input type="text" id="sender-id" placeholder="Enter your eSewa ID">
+    <button onclick="confirmRecharge()">Confirm</button>
+    <button onclick="backToDashboard()">Back</button>
+  </div>
+
+  <!-- Withdraw Page -->
+  <div class="page" id="withdraw-page">
+    <h2>🏦 Withdraw Funds</h2>
+    <p>Minimum Withdraw: Rs.1000</p>
+    <input type="text" id="withdraw-id" placeholder="Enter your eSewa/Khalti ID">
+    <input type="number" id="withdraw-amount" placeholder="Enter amount">
+    <button onclick="confirmWithdraw()">Request Withdraw</button>
+    <button onclick="backToDashboard()">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
